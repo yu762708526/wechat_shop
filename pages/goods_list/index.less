@@ -1,0 +1,41 @@
+.goodList {
+  .goodDetail {
+    navigator {
+      display: flex;
+      border-bottom: 1rpx solid #ddd;
+      padding: 10rpx 0;
+
+      .detail_left_image {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        image {
+
+          width: 70%;
+        }
+      }
+
+      .detail_right {
+        flex: 3;
+
+        .right_text {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          margin-top: 20rpx;
+          margin-bottom: 30rpx;
+          // box-sizing: border-box;
+        }
+
+        .right_price {
+          color: var(--themeColor);
+          font-size: 30rpx;
+        }
+      }
+    }
+  }
+}

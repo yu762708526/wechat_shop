@@ -1,0 +1,46 @@
+<view class="cart">
+  <!-- 地址信息 -->
+  <view class="getAddressText">
+    <!-- 左边名字 -->
+    <view class="text_left">
+      <view>{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <!-- 右边电话 -->
+    <view class="text_right">{{address.telNumber}}</view>
+  </view>
+  <!-- 购物车标题 -->
+  <view class="cart_title">购物车</view>
+  <!-- 购物车商品 -->
+  <view class="cart_content">
+    <view class="content_item" wx:for="{{cart}}" wx:key="goods_id">
+      <!-- 图片 -->
+      <navigator class="item_img">
+        <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2150262808,1493197886&fm=26&gp=0.jpg'}}"></image>
+      </navigator>
+      <!-- 价格区域 -->
+      <view class="item_price">
+        <view class="item_price_text">{{item.goods_name}}</view>
+        <view class="item_price_count">
+          <view class="price">￥{{item.goods_price*item.count}}</view>
+          <view class="count">
+            <view class="count_num">X {{item.count}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部栏 -->
+  <view class="footer">
+    <!-- 中间总价格 -->
+    <view class="footer_total">
+      <view class="total_price">
+        合计：
+        <text class="price_text">￥ {{allprice}}</text>
+      </view>
+      <view class="total_text">包含运费</view>
+    </view>
+    <!-- 右边结算 -->
+    <view class="footer_right" bindtap="handlePay">支付({{allCount}})</view>
+  </view>
+</view>

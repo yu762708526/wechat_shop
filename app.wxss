@@ -1,0 +1,23 @@
+@import './common/icon/iconfont.wxss';
+
+/* 样式初始化 */
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  /* 定义主题颜色 */
+  --themeColor: #F8554D;
+  /* 初始化文字大小 */
+  /* 假设375的设计图 */
+  /* 1px = 2rpx    */
+  font-size: 28rpx;
+}

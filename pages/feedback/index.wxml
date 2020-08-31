@@ -1,0 +1,26 @@
+<tabs tabs="{{tabs}}" bindchangeTab="toggleTabs">
+  <view class="content">
+    <view class="content_title">问题的种类</view>
+    <view class="content_item">
+      <text class="item-text">功能建议</text>
+      <text class="item-text">购买遇到问题</text>
+      <text class="item-text">性能问题</text>
+      <text class="item-text">其他</text>
+    </view>
+    <view class="content_area">
+      <textarea placeholder="请描述一下您的问题" bindinput="getText" value="{{value}}"></textarea>
+      <view class="btn_img">
+        <button class="btn" bindtap="upImage">+</button>
+        <view class="upimg" wx:for="{{uPimages}}" wx:key="*this">
+          <upImg src="{{item}}" bindtap="delectImage" data-index="{{index}}" binddelectIconParent="delectIcon"></upImg>
+        </view>
+      </view>
+    </view>
+    <view class="submit">
+      <button bindtap="handleBtn">
+        <icon type="success" size="23" color="white"></icon>
+        提交
+      </button>
+    </view>
+  </view>
+</tabs>

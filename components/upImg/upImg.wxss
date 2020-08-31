@@ -1,0 +1,1 @@
+.main{height:90rpx;width:90rpx;position:relative}.main .img{height:100%;width:100%;border-radius:10rpx}.main .ico{position:absolute;top:-20rpx;right:-20rpx}

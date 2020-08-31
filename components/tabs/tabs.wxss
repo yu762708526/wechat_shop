@@ -1,0 +1,1 @@
+.tabs .tabs_nav{display:flex;height:80rpx}.tabs .tabs_nav .tabs_item{display:flex;justify-content:center;align-items:center;flex:1;color:#666}.tabs .tabs_nav .on{color:#F5554F;border-bottom:5rpx solid #F5554F}

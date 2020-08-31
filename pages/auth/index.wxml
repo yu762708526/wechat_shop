@@ -1,0 +1,1 @@
+<button plain type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取token</button>

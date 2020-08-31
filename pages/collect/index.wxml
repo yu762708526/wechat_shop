@@ -1,0 +1,20 @@
+<tabs tabs="{{tabs}}" bindchangeTab="toggleTabs">
+  <!-- 分类栏 -->
+  <view class="type">
+    <view class="type_all">全部</view>
+    <view class="type_hot">正在热卖</view>
+    <view class="type_future">即将上线</view>
+  </view>
+  <!-- 商品栏 -->
+  <view class="goods">
+    <navigator wx:for="{{collect}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      <view class="goods_img">
+        <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+      </view>
+      <view class="goods_content">
+        <view class="content_text">{{item.goods_name}}</view>
+        <view class="content_price">￥ {{item.goods_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</tabs>
